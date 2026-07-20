@@ -1,0 +1,4 @@
+question 1: 
+select sales_transactions.product_id, inventory_current_stock.product_name from sales_transactions, inventory_current_stock where quantity_sold=0;
+question 2:
+select user_id, user_name from users where user_id in(select friend_id from friends where user_id = (select user_id from users where user_name='Karl')) intersect select user_id,user_name from users where user_id in(select friend_id from friends where user_id=(select user_id from users where user_name='Hans'));
