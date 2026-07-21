@@ -1,0 +1,4 @@
+q1. select * from Arts Union select * from Science;
+q2. select emp_name from employee union all select emp_name from pt_employee;
+q3. select f_name from fruit intersect select inv_name from inventory;
+q4. select f_name from fruit except select inv_name from inventory;
