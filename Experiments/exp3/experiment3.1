@@ -1,0 +1,9 @@
+q1. select department, count(case when Marks>80 then 1 else NULL end) as Dept_HighScore_Count from student group by department;
+q2. select department,
+SUM(CASE WHEN Age>20 THEN Fee ELSE 0 END) as Sum_Senior_Fee
+FROM student group by department;
+
+q3.select Department,
+(100*(SUM(case when age>20 then fee else 0 end))/SUM(Fee)) as Senior_Fee_Percentage
+from student
+group by Department;
